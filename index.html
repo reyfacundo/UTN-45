@@ -8,19 +8,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a href="#" class="logo"><img src="./assets/yn.png" alt="logo"></a>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">CHARACTERS</a></li>
-                <li><a href="#">GALLERY</a></li>
-                <li><a href="#">CONTACT US</a></li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vid-gallery">MEDIA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introduction">STORY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#characters">CHARACTERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">GALLERY</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -33,19 +50,126 @@
             </video>
         </div>
         <div class="iframe">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YHOlAeh4KCA?si=vW2i4nBheKoUsM5D"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ayi6VfCKBcA?si=wF-nEuZUACZUl7cH"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YHOlAeh4KCA?si=vW2i4nBheKoUsM5D"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ayi6VfCKBcA?si=wF-nEuZUACZUl7cH"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </div>
         <div class="qr">
             <img src="./assets/qr.png" alt="QR-CODE">
         </div>
     </main>
+    <div class="parallax">
+        <section id="vid-gallery" class="video-gallery">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators" id="iframe-carousel">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe src="https://www.youtube.com/embed/ayi6VfCKBcA?si=wF-nEuZUACZUl7cH"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/ayi6VfCKBcA?si=wF-nEuZUACZUl7cH"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/ayi6VfCKBcA?si=wF-nEuZUACZUl7cH"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <section class="story" id="introduction">
+        <div class="story-container">
+            <h2>INTRODUCTION</h2>
+            <span class="intro">
+                <p>'I wanted to tell you that wherever you may end up in this world, I will be searching for
+                    you.'</p>
+            </span>
+            <p>Directed by Makoto Shinkai, 'Kimi no Na wa,' or 'Your Name,' is a Japanese animated film that beautifully
+                blends romance, fantasy, and drama. It follows the lives of two teenagers, Taki and Mitsuha, living in
+                different worlds but sharing a profound connection.</p>
+            <p>Taki, a high school boy in Tokyo, and Mitsuha, a high school girl in a rural town, experience a
+                mysterious phenomenon: they swap bodies sporadically, leaving them baffled. While navigating each
+                other's lives, they learn about challenges, dreams, and responsibilities, forming a deep bond through
+                shared notes.</p>
+            <p>As their connection deepens, the body-swapping stops, leaving them longing for each other. Taki embarks
+                on a quest to reunite with Mitsuha.</p>
+</body>
+</div>
+<img src="./assets/kimi.jpg" alt="mitsuha-taki">
+</section>
+<div class="parallax">
+    <section class="characters" id="characters">
+        <div>
+            <h2>CHARACTERS</h2>
+            <div class="char-container">
+                <div class="char-card">
+                    <img src="./assets/mitsuha.png" alt="mitsuha">
+                    <h3>MITSUHA</h3>
+                    <p>Mitsuha is a lively high school girl from a charming rural town. She's got
+                        big dreams and a sense of adventure that reaches far beyond her hometown, where everyone
+                        knows
+                        everyone else.</p>
+                </div>
+                <div class="char-card">
+                    <img src="./assets/taki.png" alt="taki">
+                    <h3>TAKI</h3>
+                    <p>Taki is a diligent high school student living in Tokyo. He's ambitious,
+                        hardworking, and always on the go, striving to achieve his dreams in the fast-paced city.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<section class="gallery" id="gallery">
+    <div class="grid">
+        <div class="grid-1"><img src="./assets/k1.png" alt="gallery-1"></div>
+        <div class="grid-2"><img src="./assets/k2.png" alt="gallery-2"></div>
+        <div class="grid-3"><img src="./assets/k3.png" alt="gallery-3"></div>
+        <div class="grid-4"><img src="./assets/k4.png" alt="gallery-4"></div>
+        <div class="grid-5"><img src="./assets/k5.png" alt="gallery-5"></div>
+        <div class="grid-6"><img src="./assets/k6.png" alt="gallery-6"></div>
+    </div>
+</section>
+<footer>
+    <i class="bi bi-youtube"></i>
+    <i class="bi bi-twitter"></i>
+    <i class="bi bi-pinterest"></i>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
