@@ -2,10 +2,16 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     font-family: 'Fjalla One', sans-serif;
     user-select: none
+}
+
+html {
+    height: 100%;
+    width: 100%;
 }
 
 .navbar {
@@ -183,21 +189,27 @@ h1 {
     justify-content: center;
 }
 
+
 .story-container {
     display: flex;
-    font-size: 1.2rem;
     justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    width: 35vw;
-    margin-left: 20vw;
-    text-align: start;
+    align-items: center;
+    width: 1000px;
+    margin-left: 50px;
+}
+
+.story-container img {
+    width: 500px
 }
 
 .story-container h2 {
     border-bottom: 5px solid black;
     margin-bottom: 3rem;
     font-size: 2rem;
+}
+
+.story-container .char-img-sm {
+    display: none;
 }
 
 .intro {
@@ -213,42 +225,49 @@ h1 {
     word-spacing: 3px;
 }
 
+
+/* Existing CSS */
 .characters {
     height: 100vh;
-    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 50px;
+    height: 100vh;
 }
 
 .char-card {
-    word-spacing: 2px;
-    height: 600px;
-}
-
-.char-container {
+    max-width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width: 1150px;
-    gap: 5rem;
+    flex-direction: column;
 }
 
 .char-card img {
-    width: 100%;
-    height: 90%;
-    object-fit: scale-down;
+    max-width: 100%;
+    max-height: 50%;
+    object-fit: contain;
 }
+
+.char-card h3 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.char-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(168, 168, 168);
+}
+
 
 .char-card img:hover {
     transform: scale(1.1);
 }
 
-.char-card h3 {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-}
 
 
 .gallery {
@@ -339,13 +358,136 @@ footer i {
     .jp {
         font-size: 5rem;
     }
+
+    .story {
+        display: flex;
+        align-items: center;
+    }
+
+    .story h2 {
+        overflow-y: hidden;
+    }
+
+    .story-container {
+        display: block;
+        /* margin: 0px 20px 0px 30px; */
+        margin: 0px;
+        width: 80%;
+    }
+
+    .story-container .text {
+        margin-bottom: 10px;
+        /* Adjust the space between text and image for smaller screens */
+    }
+
+    .story-container .char-img {
+        display: none;
+        /* Hide the large image */
+    }
+
+    .story-container .char-img-sm {
+        display: block;
+        text-align: center;
+        /* Display the small image on smaller screens */
+    }
+
+    .story-container img {
+        width: 80%;
+        height: auto;
+    }
+
+    .story-container h2 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .intro {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
 }
+
+
 
 /* tablet */
 
 /* mobile */
 @media (max-width: 576px) {
-    html {
-        background-color: red;
+
+    .story {
+        display: flex;
+        align-items: center;
     }
+
+    .story h2 {
+        overflow-y: hidden;
+    }
+
+    .story-container {
+        display: block;
+        /* margin: 0px 20px 0px 30px; */
+        margin: 0px;
+        width: 80%;
+    }
+
+    .story-container .text {
+        margin-bottom: 10px;
+        /* Adjust the space between text and image for smaller screens */
+    }
+
+    .story-container .char-img {
+        display: none;
+        /* Hide the large image */
+    }
+
+    .story-container .char-img-sm {
+        display: block;
+        text-align: center;
+        /* Display the small image on smaller screens */
+    }
+
+    .story-container img {
+        width: 80%;
+        height: auto;
+    }
+
+    .story-container h2 {
+        margin-bottom: 2rem;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .intro {
+        font-size: 2rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .char-card p {
+        max-height: 170px;
+        overflow-y: auto;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(24, 24, 24);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(133, 166, 255);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(109, 137, 228)
 }
